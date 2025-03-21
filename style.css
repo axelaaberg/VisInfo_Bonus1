@@ -1,0 +1,202 @@
+
+/* El código de las animaciones de los ojos 
+le pertenece a Prashant Yadav en https://learnersbucket.com/tutorials/js-projects/eye-follow-cursor-in-javascript/ 
+*/
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    background-color: pink;
+  }
+
+.button {
+    position: absolute; /* Add this line to enable positioning */
+    top: 85%; /* Position from the top */
+    left: 44.5%; /* Position from the left */
+    background: linear-gradient(to right, #d84315, #ffeb3b); /* Degradado de rojo a amarillo */
+    color: white; /* Texto blanco */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold;
+    border: none;
+    padding: 15px 40px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra difusa */
+    transition: all 0.3s ease-in-out;
+    }
+
+  /* Efecto hover */
+  .button:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Definimos los ojos */
+  .eyes {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 3px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  /* La retina */
+  .eye-retina {
+    display: inline-block;
+    width: 30%;
+    height: 50%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+/*El codigo original para crear el gato 
+le pertenece a Chung Chloe y esta publicado en:
+https://codepen.io/chungchloe/pen/gOwJGzz*/  
+
+/*Container*/
+.gigi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 5em;
+    margin-left: -10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*Acá definimos la parte externa de las orejas*/
+  .ears {
+    position: relative;
+    width: 0; height: 0;
+    z-index: -1;
+  }
+   /*La parte externa de las orejas*/
+   .ears:before {
+    content: '';
+    position: absolute;   
+    transform: translateX(-50%);  /* Ajusta el centrado más preciso */
+    
+    /* Triángulo más pequeño para la parte interna */
+    border-bottom: 180px solid #9E78AC; /* Se redujo un poco para que no sea tan grande */
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+
+    z-index: 1;
+  }
+
+
+  #ear1 {
+    bottom: 2.5em; left: 14em;
+    border-bottom: 200px solid #111;
+    border-right: 150px solid transparent;
+    rotate: -5deg;
+  }
+
+  #ear1:before{
+    rotate: -14deg;
+    bottom: -11em; left: 1.5em;
+  }
+  
+  #ear2 {
+    bottom: 15em; left: 24em;
+    border-bottom: 200px solid #111;
+    border-left: 150px solid transparent;
+    rotate: 5deg;
+  }
+
+    #ear2:before{
+        rotate: 14deg;
+        bottom: -12em; left: -1.75em;
+    }
+
+
+  
+  /*Face*/
+  .face {
+    width: 400px; 
+    height: 300px;
+    border-radius: 50%;
+    background: rgb(34, 34, 34);
+    background: linear-gradient(to right, #222 15%, #4a4a4a);
+    
+    /* Use margin to move the face */
+    margin-top: 30px;  /* Move down */
+    margin-left: 40px;  /* Move right */
+}
+  
+  /*Eyes*/
+  .eyes {
+    position: relative;
+    margin: 10px;
+    width: 110px; height: 120px;
+    background: #eee;
+    border-radius: 50%;
+  }
+
+  #eye1 {
+    bottom: -5em; left: 3em;
+    background: linear-gradient(
+    to right, #bbb, #eee 50%);
+  }
+  
+
+  #eye1:before { left: 3.2em; }
+
+  #eye2 {
+    bottom: 3.2em; left: 13.7em;
+    background: linear-gradient(
+    to right, #bbb, #eee 50%);
+  }
+  
+
+  #eye2:before { left: 3.2em; }
+
+  /* Nariz */
+  .nose {
+    position: relative;
+    bottom: 5em; left: 10.5em;
+    width: 0; height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 35px solid #D66F83;
+    border-radius: 30%;
+  }
+  
+  /*Ribbon*/
+  .ribbon { position: relative; }
+  .ribbon div { position: absolute; }
+  #ribbon-middle {
+    width: 60px; height: 60px;
+    border-radius: 30%;
+    bottom: -13em; left: -14.5em;
+    background: #d81f3e;
+    z-index: 2;
+  }
+  .ribbon-sides, .ribbon-sides:after {
+    border-radius: 15%;
+  }
+  #ribbon-left {
+    border-left: 150px solid #d81f3e;
+    border-bottom: 80px solid transparent;
+    bottom: -14.8em; left: -20.5em;
+    transform: rotate(25deg);
+  }
+  #ribbon-right {
+    border-right: 150px solid #d81f3e;
+    border-bottom: 80px solid transparent;
+    bottom: -14.8em; left: -14em;
+    transform: rotate(-25deg);
+  }
