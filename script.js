@@ -6,16 +6,37 @@ const retina = document.querySelectorAll(".eye-retina");
 
 window.addEventListener("mousemove", (e) => {
   console.log("El mouse está dentro de la ventana")
-  
+
+  //Posicion del mouse
+  const { pageX, pageY } = e;
+
+  //Tamaño de la pantalla
+  const { innerWidth, innerHeight } = window;
+
+  let left = (pageX / innerWidth) * 100;
+  let top = (pageY / innerHeight) * 100;
+
+  //limites del movimiento del ojo.
+    left = left < 10 ? 10 : left;
+    left = left > 90 ? 90 : left;
+    top = top < 10 ? 10 : top;
+    top = top > 90 ? 90 : top;
+
+  //movimiento de los ojos
+  retina.forEach((f) => {
+    f.style.left = `${left}%`;
+    f.style.top = `${top}%`;
+  });
+
 });
 
 
-//Evento click encima de la figura (Gigi)
+/* //Evento click encima de la figura (Gigi)
 
 document.querySelector('.gigi').addEventListener('click', function() {
   console.log("La figura fue apretada")
   
-});
+}); */
 
 //Función para obtener un color aleatorio
 

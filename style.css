@@ -12,9 +12,9 @@ le pertenece a Prashant Yadav en https://learnersbucket.com/tutorials/js-project
   }
 
 .button {
-    position: absolute; /* Add this line to enable positioning */
-    top: 85%; /* Position from the top */
-    left: 44.5%; /* Position from the left */
+    position: relative; /* Add this line to enable positioning */
+    bottom: -35em; /* Position from the top */
+    left: 1em; /* Lo centra horizontalmente */
     background: linear-gradient(to right, #d84315, #ffeb3b); /* Degradado de rojo a amarillo */
     color: white; /* Texto blanco */
     font-size: 18px; /* Tamaño del texto */
@@ -72,6 +72,7 @@ https://codepen.io/chungchloe/pen/gOwJGzz*/
     bottom: 0;
     margin-top: 5em;
     margin-left: -10em;
+    margin-bottom: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +122,6 @@ https://codepen.io/chungchloe/pen/gOwJGzz*/
         rotate: 14deg;
         bottom: -12em; left: -1.75em;
     }
-
 
   
   /*Face*/
