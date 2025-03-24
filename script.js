@@ -3,7 +3,6 @@ const retina = document.querySelectorAll(".eye-retina");
 
 
 //Evento movimiento del mouse 
-
 window.addEventListener("mousemove", (e) => {
   console.log("El mouse está dentro de la ventana")
 
@@ -16,13 +15,13 @@ window.addEventListener("mousemove", (e) => {
   let left = (pageX / innerWidth) * 100;
   let top = (pageY / innerHeight) * 100;
 
-  //limites del movimiento del ojo.
+  //limites para que no salga la retina de los ojos
     left = left < 10 ? 10 : left;
     left = left > 90 ? 90 : left;
     top = top < 10 ? 10 : top;
     top = top > 90 ? 90 : top;
 
-  //movimiento de los ojos
+  //movimiento de los ojos, se actualiza constantemente
   retina.forEach((f) => {
     f.style.left = `${left}%`;
     f.style.top = `${top}%`;
@@ -38,8 +37,8 @@ document.querySelector('.gigi').addEventListener('click', function() {
   
 }); */
 
-//Función para obtener un color aleatorio
 
+//Función para obtener un color aleatorio
 function getRandomColor() {
     let letters = "0123456789ABCDEF";
     let color = "#";
@@ -60,6 +59,4 @@ document.querySelector('.button').addEventListener('click', function() {
   document.querySelector("#ribbon-left").style.borderLeftColor = ribbonColor;
   document.querySelector("#ribbon-right").style.borderRightColor = ribbonColor;
 
-
-  
 });    

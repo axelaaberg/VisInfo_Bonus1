@@ -12,24 +12,24 @@ le pertenece a Prashant Yadav en https://learnersbucket.com/tutorials/js-project
   }
 
 .button {
-    position: relative; /* Add this line to enable positioning */
-    bottom: -35em; /* Position from the top */
-    left: 1em; /* Lo centra horizontalmente */
-    background: linear-gradient(to right, #d84315, #ffeb3b); /* Degradado de rojo a amarillo */
-    color: white; /* Texto blanco */
-    font-size: 18px; /* Tamaño del texto */
+    position: relative; 
+    bottom: -35em; 
+    left: 1em;     
+    background: linear-gradient(to right, blue, yellow);
+    color: white; 
+    font-size: 18px;
     font-weight: bold;
     border: none;
-    padding: 15px 40px; /* Espaciado interno */
-    border-radius: 50px; /* Bordes redondeados */
+    padding: 15px 40px; 
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra difusa */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
     transition: all 0.3s ease-in-out;
     }
 
-  /* Efecto hover */
+  
   .button:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transform: scale(1.05); 
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
   }
   
@@ -88,10 +88,10 @@ https://codepen.io/chungchloe/pen/gOwJGzz*/
    .ears:before {
     content: '';
     position: absolute;   
-    transform: translateX(-50%);  /* Ajusta el centrado más preciso */
+    transform: translateX(-50%);  
     
     /* Triángulo más pequeño para la parte interna */
-    border-bottom: 180px solid #9E78AC; /* Se redujo un poco para que no sea tan grande */
+    border-bottom: 180px solid #9E78AC; 
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
 
